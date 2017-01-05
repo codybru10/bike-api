@@ -50,7 +50,7 @@ Bike.prototype.showStolenInRange = function(location, startDate, endDate) {
       response.bikes.forEach(function(bike){
         if(bike.date_stolen > start && bike.date_stolen < end) {
           console.log("Heyyy");
-            $('#inRange').append("<li>" + bike.title + " "+ bike.date_stolen + "</li>");
+            $('#inRange').append("<li>" + bike.title + " "+ bike.date_stolen + "<img src='" +bike.large_img +"' >" + "</li>");
             stolenLastweek.push(bike);
             } if(stolenLastweek.length === 0) {
           $('#inRange').text("Nothing has been stolen in the last seven days");
