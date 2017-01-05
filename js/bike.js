@@ -49,9 +49,9 @@ Bike.prototype.showStolenInRange = function(location, startDate, endDate) {
       response.bikes.forEach(function(bike){
         if(bike.date_stolen > start && bike.date_stolen < end) {
           if (bike.large_img === null) {
-            $('#inRange').append("<li>" + bike.title + " "+ bike.date_stolen + "<img src='../../img/no-bike-img.png' >" + "</li>");
+            $('#inRange').append("<h3>" + bike.title + " Date Stolen: "+ new Date(bike.date_stolen *1000) + "<img src='../../img/no-bike-img.png' >" + "</h3>");
           } else {
-            $('#inRange').append("<li>" + bike.title + " "+ bike.date_stolen + "<img src='" +bike.large_img +"' >" + "</li>");
+            $('#inRange').append("<h3>" + bike.title + " Date Stolen: "+ new Date(bike.date_stolen *1000) + "<img src='" +bike.large_img +"' >" + "</h3>");
             stolenLastweek.push(bike);
             } if(stolenLastweek.length === 0) {
           $('#inRange').text("Nothing has been stolen in the last seven days");
