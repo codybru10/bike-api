@@ -10,7 +10,6 @@ $(document).ready(function(){
     test_bike.showStolen(location);
     test_bike.getStolen(location);
     test_bike.justStolen(location);
-    console.log("datecehck")
     });
 
 
@@ -20,7 +19,7 @@ $(document).ready(function(){
     var startDate = $('#startDate').val();
     var endDate = $('#endDate').val();
     test_bike.showStolenInRange(location, startDate, endDate);
-    console.log("yo");
+
     });
 
 

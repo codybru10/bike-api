@@ -30,7 +30,7 @@ Bike.prototype.justStolen = function(location) {
       var stolenLastweek = [];
       response.bikes.forEach(function(bike){
         if(bike.date_stolen > lastWeek) {
-          console.log("WAHHT");
+
             $('#recentList').append("<li>" + bike.title + " "+ bike.date_stolen + "</li>");
             stolenLastweek.push(bike);
             } if(stolenLastweek.length === 0) {
@@ -48,16 +48,18 @@ Bike.prototype.showStolenInRange = function(location, startDate, endDate) {
       var stolenLastweek = [];
       response.bikes.forEach(function(bike){
         if(bike.date_stolen > start && bike.date_stolen < end) {
-          console.log("Heyyy");
+          if (bike.large_img === null) {
+            $('#inRange').append("<li>" + bike.title + " "+ bike.date_stolen + "<img src='../../img/no-bike-img.png' >" + "</li>");
+          } else {
             $('#inRange').append("<li>" + bike.title + " "+ bike.date_stolen + "<img src='" +bike.large_img +"' >" + "</li>");
             stolenLastweek.push(bike);
             } if(stolenLastweek.length === 0) {
           $('#inRange').text("Nothing has been stolen in the last seven days");
         }
-      });
+      }
     });
-  };
-
+  });
+};
 
 
 exports.bikeModule = Bike;
