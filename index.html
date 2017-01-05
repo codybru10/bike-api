@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="build/css/style.css">
    <script src="build/js/vendor.min.js"></script>
    <script type="text/javascript" src="build/js/app.js"></script>
    <script src="bower_components/moment/min/moment.min.js"></script>
@@ -10,42 +11,36 @@
   </head>
   <body>
     <div class="container">
-
-
-    <form class="form-group" id="locationForm" action="index.html" method="post">
-      <label for="locationForm">Enter your location</label>
-      <input type="text" id="location" value="">
-      <button type="submit" name="button">Show me the bikes!</button>
-    </form>
-
-    <form class ="form-group" id="dateForm" >
-      <label for="locationForm">Enter your location</label>
-      <input type="text" id="location2" value="">
-      <label for="startDate">Enter Start Date:</label>
-      <input type="date" id="startDate">
-      <label for="endDate">Enter End Date:</label>
-      <input type="date" id="endDate">
-      <button type="submit"  id="dateButton" name="button">Show me the bikes!</button>
-    </form>
-
-
-    <div>
-      <p id="showBikes" id></p>
+      <form class="form-group" id="locationForm" action="index.html" method="post">
+        <label for="locationForm">Enter your location</label>
+        <input type="text" id="location" value="">
+        <button type="submit" name="button">Show me the bikes!</button>
+      </form>
+      <form class ="form-group" id="dateForm" >
+        <label for="locationForm">Enter your location</label>
+        <input type="text" id="location2" value="">
+        <label for="startDate">Enter Start Date:</label>
+        <input type="date" id="startDate">
+        <label for="endDate">Enter End Date:</label>
+        <input type="date" id="endDate">
+        <button type="submit"  id="dateButton" name="button">Show me the bikes!</button>
+      </form>
+      <div>
+        <p id="showBikes" id></p>
+      </div>
+      <ul>
+        <h3>Makes of all stolen bikes in the area</h3>
+        <div id="bikeList">
+        </div>
+        <h3>Stolen Within the last week</h3>
+        <div id="recentList">
+        </div>
+        <h3>Stolen Within Date Range</h3>
+        <div class="row">
+          <div class="col-md-12 well" id="inRange">
+          </div>
+        </div>
+      </ul>
     </div>
-    <ul>
-    <h3>Makes of all stolen bikes in the area</h3>
-    <div id="bikeList">
-    </div>
-    <h3>Stolen Within the last week</h3>
-    <div id="recentList">
-
-    </div>
-    <h3>Stolen Within Date Range</h3>
-    <div id="inRange">
-
-    </div>
-
-    </div>
-    </ul>
   </body>
 </html>

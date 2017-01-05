@@ -43,7 +43,6 @@ Bike.prototype.justStolen = function(location) {
 Bike.prototype.showStolenInRange = function(location, startDate, endDate) {
   $.get('https://bikeindex.org:443/api/v3/search?page=1&per_page=1000&location=' + location + '&distance=10&stolenness=proximity&appid=' + apiKey).then(function(response) {
     console.log(response);
-      debugger;
       var start = Date.parse(startDate)/1000;
       var end = Date.parse(endDate)/1000;
       var stolenLastweek = [];
