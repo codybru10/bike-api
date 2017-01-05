@@ -10,6 +10,10 @@ $(document).ready(function(){
     test_bike.showStolen(location);
     test_bike.getStolen(location);
     test_bike.justStolen(location);
+    $("#numOfStolen").toggleClass("hidden");
+    $("#recentlyStolen").toggleClass("hidden");
+    $("#firstHundred").toggleClass("hidden");
+
     });
 
 
@@ -19,7 +23,7 @@ $(document).ready(function(){
     var startDate = $('#startDate').val();
     var endDate = $('#endDate').val();
     test_bike.showStolenInRange(location, startDate, endDate);
-
+      $("#searchStolen").toggleClass("hidden");
     });
 
 

@@ -6,7 +6,7 @@ Bike.prototype.getStolen = function(location) {
   $.get('https://bikeindex.org:443/api/v3/search?page=1&per_page=1000&location=' + location + '&distance=10&stolenness=proximity').then(function(response) {
     console.log(response);
 
-    $('#showBikes').text("These are the bikes stolen nearby " +location+ ": " + response.bikes.length);
+    $('#showBikes').text(response.bikes.length);
 
   });
 };
