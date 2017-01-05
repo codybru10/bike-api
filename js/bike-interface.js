@@ -10,13 +10,20 @@ $(document).ready(function(){
     test_bike.showStolen(location);
     test_bike.getStolen(location);
     test_bike.justStolen(location);
-  $('#dateButton').click(function(){
     debugger;
+    console.log("datecehck")
+    });
+
+
+  $('#dateForm').submit(function(event){
+    event.preventDefault();
+    var location = $('#location2').val();
     var startDate = $('#startDate').val();
     var endDate = $('#endDate').val();
-    test_bike.showStolenInRange(location, startDate, endDate)
+    debugger;
+    test_bike.showStolenInRange(location, startDate, endDate);
+    console.log("yo");
     });
-  });
 
 
 
